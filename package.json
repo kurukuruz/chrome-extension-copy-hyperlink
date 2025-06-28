@@ -1,0 +1,11 @@
+{
+  "name": "chrome-extension-demo",
+  "packageManager": "yarn@4.9.2",
+  "scripts": {
+    "build": "tsc && cp public/* dist/"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.327",
+    "typescript": "^5.8.3"
+  }
+}
