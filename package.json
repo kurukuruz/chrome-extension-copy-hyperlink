@@ -2,10 +2,13 @@
   "name": "chrome-extension-demo",
   "packageManager": "yarn@4.9.2",
   "scripts": {
-    "build": "tsc && cp public/* dist/"
+    "build": "yarn build:content && yarn build:background && cp public/* dist/",
+    "build:content": "vite build --config vite.content.config.ts",
+    "build:background": "vite build --config vite.background.config.ts"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.327",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
   }
 }
