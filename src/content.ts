@@ -1,5 +1,7 @@
+import { getTitle } from "./get-title/index";
+
 {
-  const title = document.title; // ページのタイトルを取得
+  const title = getTitle(); // タイトルを取得
   const url = window.location.href; // ページのURLを取得
 
   const textItem = new ClipboardItem({
