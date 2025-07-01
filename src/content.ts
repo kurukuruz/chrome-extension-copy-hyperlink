@@ -55,11 +55,11 @@ type SnackbarConfig = {
 }
 
 const displaySnackbar = (config: SnackbarConfig) => {
-    // Snackbarを作成
+  // Snackbarを作成
   const snackbar = document.createElement('div');
   snackbar.textContent = config.message;
   snackbar.style.position = 'fixed';
-  snackbar.style.bottom = '20px';
+  snackbar.style.top = '20px';
   snackbar.style.left = '50%';
   snackbar.style.transform = 'translateX(-50%)';
   snackbar.style.backgroundColor = config.backgroundColor || '#323232';
@@ -76,7 +76,7 @@ const displaySnackbar = (config: SnackbarConfig) => {
   // 徐々に表示
   setTimeout(() => {
     snackbar.style.opacity = '1';
-  }, 10);
+  }, 100);
 
   // 3秒後に徐々に消える
   setTimeout(() => {
@@ -84,7 +84,7 @@ const displaySnackbar = (config: SnackbarConfig) => {
     snackbar.addEventListener('transitionend', () => {
       snackbar.remove();
     });
-  }, 3000);
+  }, 2400);
 }
 
 main();
