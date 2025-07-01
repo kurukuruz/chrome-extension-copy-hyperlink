@@ -1,11 +1,14 @@
+import { createPlainText } from "./create-plain-text/index";
 import { getTitle } from "./get-title/index";
 
 {
   const title = getTitle(); // タイトルを取得
   const url = window.location.href; // ページのURLを取得
 
+  const plainText = createPlainText(title, url);
+
   const textItem = new ClipboardItem({
-    'text/plain': new Blob([`[${title}](${url})`], { type: 'text/plain' }),
+    'text/plain': new Blob([plainText], { type: 'text/plain' }),
     'text/html': new Blob([`<a href=${url}>${title}</a>`], { type: 'text/html' })
   });
 
