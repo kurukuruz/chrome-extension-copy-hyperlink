@@ -1,14 +1,16 @@
 import { GoogleDocumentGetTitlePlugin } from "./plugins/google-document";
 import { GoogleSpreadsheetsTabFirstGetTitlePlugin } from "./plugins/google-spreadsheets-tab-first";
-import { GetTitlePlugin } from "./type";
+import type { GetTitlePlugin } from "./type";
 
 const plugins = [
-    GoogleDocumentGetTitlePlugin,
-    GoogleSpreadsheetsTabFirstGetTitlePlugin
+  GoogleDocumentGetTitlePlugin,
+  GoogleSpreadsheetsTabFirstGetTitlePlugin,
 ] satisfies GetTitlePlugin[];
 
 export const getTitle = (): string => {
-    return plugins.find(plugin => plugin.match(window.location.href))?.getTitle() ||
+  return (
+    plugins.find((plugin) => plugin.match(window.location.href))?.getTitle() ||
     document.title ||
-    window.location.href;
-}
+    window.location.href
+  );
+};

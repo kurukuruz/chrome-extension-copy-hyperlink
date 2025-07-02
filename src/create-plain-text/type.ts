@@ -1,3 +1,3 @@
 export interface CreatePlainTextPlugin {
-    createPlainText: (title: string, url: string) => string;
+  createPlainText: (title: string, url: string) => string;
 }
