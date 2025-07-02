@@ -4,7 +4,9 @@
   "scripts": {
     "build": "yarn build:content && yarn build:background && cp public/* dist/",
     "build:content": "vite build --config vite.content.config.ts",
-    "build:background": "vite build --config vite.background.config.ts"
+    "build:background": "vite build --config vite.background.config.ts",
+    "biome": "biome check",
+    "biome:fix": "biome check --write"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
