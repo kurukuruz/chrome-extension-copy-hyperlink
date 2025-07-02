@@ -1,10 +1,10 @@
 import { GoogleDocumentGetTitlePlugin } from "./plugins/google-document";
-import { GoogleSpreadsheetsGetTitlePlugin } from "./plugins/google-spreadsheets";
+import { GoogleSpreadsheetsTabFirstGetTitlePlugin } from "./plugins/google-spreadsheets-tab-first";
 import { GetTitlePlugin } from "./type";
 
 const plugins = [
     GoogleDocumentGetTitlePlugin,
-    GoogleSpreadsheetsGetTitlePlugin
+    GoogleSpreadsheetsTabFirstGetTitlePlugin
 ] satisfies GetTitlePlugin[];
 
 export const getTitle = (): string => {
