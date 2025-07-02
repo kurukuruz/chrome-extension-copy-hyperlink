@@ -7,7 +7,7 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "ページのハイパーリンクを取得してクリップボードにコピーする拡張機能",
   "permissions": ["scripting"],
   "host_permissions": ["<all_urls>"],
