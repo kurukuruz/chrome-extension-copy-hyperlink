@@ -7,6 +7,7 @@
     "build:background": "vite build --config vite.background.config.ts"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.0.6",
     "@types/chrome": "^0.0.327",
     "typescript": "^5.8.3",
     "vite": "^7.0.0"
