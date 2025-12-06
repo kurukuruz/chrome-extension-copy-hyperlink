@@ -10,7 +10,7 @@
     "biome:fix": "biome check --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
+    "@biomejs/biome": "2.3.8",
     "@types/chrome": "^0.1.32",
     "typescript": "^5.9.3",
     "vite": "^7.2.6"
