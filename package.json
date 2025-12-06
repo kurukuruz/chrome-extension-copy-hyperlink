@@ -5,13 +5,14 @@
     "build": "yarn build:content && yarn build:background && cp public/* dist/",
     "build:content": "vite build --config vite.content.config.ts",
     "build:background": "vite build --config vite.background.config.ts",
+    "type-check": "tsc --noEmit",
     "biome": "biome check",
     "biome:fix": "biome check --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
-    "@types/chrome": "^0.0.327",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.0"
+    "@biomejs/biome": "2.3.8",
+    "@types/chrome": "^0.1.32",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.6"
   }
 }
